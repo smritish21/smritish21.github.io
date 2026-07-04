@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smriti Sharma — AI/ML researcher and software engineer working on memory-augmented web agents, retrieval systems, and reliable AI automation." />
+  <title>Smriti Sharma | AI Research Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Go to top">SS</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#research">Research</a>
+      <a href="#thesis">Thesis</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle dark mode">☾</button>
+  </header>
+
+  <main id="top">
+    <section class="hero section-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">AI/ML Researcher · Software Engineer · Web Agents</p>
+        <h1>Building AI systems that remember, retrieve, and act more reliably.</h1>
+        <p class="hero-text">
+          I am Smriti Sharma, a Computer Science graduate from RPTU Kaiserslautern with research experience at DFKI and 4+ years of software engineering and automation experience. My work focuses on memory-augmented LLM web agents, retrieval systems, evaluation, and practical AI automation.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#thesis">Explore my thesis</a>
+          <a class="button secondary" href="#projects">View projects</a>
+        </div>
+        <div class="quick-meta" aria-label="Profile highlights">
+          <span>📍 Germany</span>
+          <span>🧠 LLM agents</span>
+          <span>🔎 RAG / pgvector</span>
+          <span>🐍 Python</span>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal" aria-label="Research snapshot">
+        <div class="orb"></div>
+        <p class="mono">current_focus.py</p>
+        <pre><code>research = {
+  "area": "Memory for Web Agents",
+  "methods": ["Vector Retrieval", "DOM Cache", "URL Generalization"],
+  "stack": ["Python", "PostgreSQL", "pgvector", "LLMs"],
+  "goal": "less redundant reasoning, better task success"
+}</code></pre>
+      </aside>
+    </section>
+
+    <section id="research" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Research direction</p>
+        <h2>From one-off reasoning to reusable workflows</h2>
+        <p>
+          My research explores how web agents can reuse memory from previous tasks instead of reasoning from scratch every time. This matters for interactive web automation, lower compute cost, and more stable task completion.
+        </p>
+      </div>
+      <div class="focus-grid">
+        <article class="focus-card">
+          <span class="card-icon">01</span>
+          <h3>Agent Memory</h3>
+          <p>Storing task workflows, actions, thoughts, URLs, and embeddings so similar future tasks can be retrieved and reused.</p>
+        </article>
+        <article class="focus-card">
+          <span class="card-icon">02</span>
+          <h3>Retrieval + Reranking</h3>
+          <p>Using sentence embeddings and similarity search to surface useful prior experiences, then reranking them for context quality.</p>
+        </article>
+        <article class="focus-card">
+          <span class="card-icon">03</span>
+          <h3>Reliable Evaluation</h3>
+          <p>Measuring task success, step quality, efficiency, and near-success behavior to understand when memory actually helps.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="thesis" class="section thesis-section reveal">
+      <div class="section-heading compact">
+        <p class="eyebrow">Master’s thesis · DFKI</p>
+        <h2>From Prediction to Retention: Transforming Web Agents with Memory Systems</h2>
+        <p>
+          I designed a memory-augmented architecture for LLM web agents, combining vector retrieval, DOM caching, and URL generalization to reduce repeated reasoning and improve execution on web tasks.
+        </p>
+      </div>
+
+      <div class="metrics" aria-label="Thesis result highlights">
+        <div class="metric-card"><span class="metric" data-target="59">0</span><span>%</span><p>task success improvement</p></div>
+        <div class="metric-card"><span class="metric" data-target="60">0</span><span>%</span><p>productivity increase</p></div>
+        <div class="metric-card"><span class="metric" data-target="3">0</span><span>x</span><p>memory modules explored</p></div>
+      </div>
+
+      <div class="architecture">
+        <div class="pipeline" aria-label="Memory architecture diagram">
+          <button class="node active" data-panel="retrieval">New task</button>
+          <span class="arrow">→</span>
+          <button class="node" data-panel="memory">Memory DB</button>
+          <span class="arrow">→</span>
+          <button class="node" data-panel="agent">LLM agent</button>
+          <span class="arrow">→</span>
+          <button class="node" data-panel="evaluation">Evaluation</button>
+        </div>
+        <div class="panel" id="architecture-panel">
+          <h3>New task → retrieve similar workflows</h3>
+          <p>When a task arrives, its instruction is embedded and compared with stored task embeddings. The closest workflows are shown to the agent as reusable context.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects that connect research with implementation</h2>
+        <p>Filter by theme to quickly see the type of work relevant to recruiters, research groups, and collaborators.</p>
+      </div>
+
+      <div class="filter-bar" role="toolbar" aria-label="Project filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="research">Research</button>
+        <button class="filter" data-filter="ml">ML</button>
+        <button class="filter" data-filter="software">Software</button>
+        <button class="filter" data-filter="qa">QA / Automation</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card" data-tags="research ml software">
+          <div class="project-topline"><span>Thesis</span><span>2026</span></div>
+          <h3>Memory-Augmented Web Agents</h3>
+          <p>Built a memory system for LLM web agents using PostgreSQL, pgvector, SentenceTransformer embeddings, CrossEncoder reranking, DOM caching, and URL generalization.</p>
+          <div class="tags"><span>LLM Agents</span><span>pgvector</span><span>Python</span></div>
+        </article>
+
+        <article class="project-card" data-tags="ml research">
+          <div class="project-topline"><span>DFKI</span><span>HiWi</span></div>
+          <h3>Wearable Sensor ML</h3>
+          <p>Supported data collection and modeling workflows for detecting clothing-related signals from wearable sensor data.</p>
+          <div class="tags"><span>ML</span><span>Data Collection</span><span>Research</span></div>
+        </article>
+
+        <article class="project-card" data-tags="software ml">
+          <div class="project-topline"><span>Prototype</span><span>Chrome</span></div>
+          <h3>LLM Browser Automation Prototype</h3>
+          <p>Developed browser-side automation concepts with JavaScript, async interactions, DOM observation, timers, and popup control.</p>
+          <div class="tags"><span>JavaScript</span><span>Browser</span><span>Agents</span></div>
+        </article>
+
+        <article class="project-card" data-tags="qa software">
+          <div class="project-topline"><span>Akamai</span><span>SDET</span></div>
+          <h3>Product Workflow Validation Tool</h3>
+          <p>Built Python automation to validate product workflows, align testing priorities with developers, and improve repeatable release checks.</p>
+          <div class="tags"><span>Python</span><span>Automation</span><span>CI/CD</span></div>
+        </article>
+
+        <article class="project-card" data-tags="qa software">
+          <div class="project-topline"><span>Mindtree</span><span>Automation</span></div>
+          <h3>UI/API Test Automation</h3>
+          <p>Worked on Ruby-based UI/API automation and testing workflows across enterprise systems, including web apps managing network devices.</p>
+          <div class="tags"><span>Ruby</span><span>API Testing</span><span>Linux</span></div>
+        </article>
+
+        <article class="project-card" data-tags="ml software">
+          <div class="project-topline"><span>Data</span><span>Analytics</span></div>
+          <h3>Retail Analytics Data Checks</h3>
+          <p>Created Python-based checks for ETL/data workflows and supported dashboard-driven analysis for retailer market trends.</p>
+          <div class="tags"><span>Python</span><span>ETL</span><span>Tableau</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section reveal">
+      <div class="section-heading compact">
+        <p class="eyebrow">Experience timeline</p>
+        <h2>Research + engineering background</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div>
+            <h3>DFKI · Master’s Thesis / Student Researcher</h3>
+            <p>Memory systems for LLM web agents, retrieval-based workflow reuse, task evaluation, and agent productivity analysis.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div>
+            <h3>RPTU Kaiserslautern · M.Sc. Computer Science</h3>
+            <p>Focused on AI/ML, computer vision, data science, software engineering, visualization, and complex systems.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div>
+            <h3>Akamai · Software Development Engineer in Test</h3>
+            <p>Python automation, workflow validation, CI/CD, sprint coordination, and cross-functional quality engineering.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div>
+            <h3>Mindtree · Senior Software Engineer / Automation Engineer</h3>
+            <p>UI/API automation, data validation, Linux migration support, ETL checks, and enterprise testing workflows.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section skills-section reveal" aria-label="Skills">
+      <div class="section-heading compact">
+        <p class="eyebrow">Technical toolkit</p>
+        <h2>What I work with</h2>
+      </div>
+      <div class="skill-cloud">
+        <span>Python</span><span>PostgreSQL</span><span>pgvector</span><span>SentenceTransformers</span><span>OpenAI SDK</span><span>RAG</span><span>LLM Agents</span><span>Evaluation</span><span>JavaScript</span><span>Linux</span><span>Git</span><span>CI/CD</span><span>PyTorch</span><span>FAISS</span><span>Matplotlib</span><span>Tableau</span>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section reveal">
+      <div>
+        <p class="eyebrow">Let’s connect</p>
+        <h2>Open to AI/ML engineering, research assistant, and agentic AI roles.</h2>
+        <p>
+          I am especially interested in teams working on LLM agents, memory systems, retrieval, applied machine learning, and reliable AI automation.
+        </p>
+      </div>
+      <div class="contact-card">
+        <a href="mailto:your.email@example.com" id="email-link">your.email@example.com</a>
+        <button class="button secondary" id="copy-email">Copy email</button>
+        <a href="https://github.com/smritish21" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/your-linkedin/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="assets/Smriti-Sharma-CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Smriti Sharma. Built with HTML, CSS, and JavaScript for GitHub Pages.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
